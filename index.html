@@ -2,6 +2,8 @@
 <html>
 <head>
     <title>MenoTranslate</title>
+	<script type="text/javascript" src="main.js"></script>
+	<link rel="stylesheet" href="styles.css">
 </head>
 <body style="text-align: center;">
     <header>
@@ -27,71 +29,38 @@
         <p>Robo Meno:</p>
         <textarea id="show" rows=10 cols="60">
     </textarea>
+	 <table class="center">
+        <tbody>
+            <tr>
+                <td>
+                    <span id="item1" class="gatch">-</span>
+                </td>
+                <td>
+                    <span id="item2" class="gatch">-</span>
+                </td>
+                <td>
+                    <span id="item3" class="gatch">-</span>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+	    <div class="center lever">
+        <button type="button" class="btn btn-primary" onclick="spin()">Lever</button>
+    </div>
+	
+<p><button onclick="myMove()">Click Me</button></p> 
 
+<div id ="container">
+	<div id ="pull"><img src="a.png" alt="Smiley face" height="250" width="250"></div>
+  <div id ="animate"></div>
+  
+</div>
 
-        <script>
-            function countWords() {
+    <div id="message" class="center message">
+        You Won!
+    </div>
 
-                // Get the input text value
-                var text = document
-                    .getElementById("inputField").value;
-                text = text.toLowerCase();
-
-                // Initialize the word counter
-                var numWords = 0;
-
-                // Loop through the text
-                // and count spaces in it
-                for (var i = 0; i < text.length; i++) {
-                    var currentCharacter = text[i];
-
-                    // Check if the character is a space
-                    if (currentCharacter == " ") {
-                        numWords += 1;
-                    }
-                }
-
-                // Display it as output
-                if (text === "snake") {
-                    document.getElementById("show")
-                        .innerHTML = "Chigau! Meno is not Snake!! Meno is Dragon!";
-                }
-                else if (text == "shake" || text == "yoyen") {
-                    document.getElementById("show")
-                        .innerHTML = "Meno Shaaaaaaake!";
-                }
-				else if (text == "stare" || text == "watching") {
-                    document.getElementById("show")
-                        .innerHTML = "Cheeeeeeeeeeeeeeee!";
-                }
-                else if (text == "sus" || text == "queen" || text == "sexy") {
-                    document.getElementById("show")
-                        .innerHTML = "Deshou, Meno is sexy dragon queen!";
-                }
-                else if (text == "yami meno" || text == "laugh") {
-                    document.getElementById("show")
-                        .innerHTML = "Meh heh heh heh";
-                }
-                else if (text == "mdem") {
-                    document.getElementById("show")
-                        .innerHTML = "Haato Shining Dragon, Haato Shining Dragon, Haato Shining Dragon, Haato Shining Dragon";
-                }
-                else if (text == "chris") {
-                    document.getElementById("show")
-                        .innerHTML = "Yo, is that the real Meno-chan?";
-                }
-                else if (text != "") {
-                    var ippui = "Ippui"
-                    for (let i = 0; i < numWords; i++) {
-                        ippui = ippui + " "
-                        ippui = ippui + "ippui"
-                    }
-                    ippui = ippui + "."
-                    document.getElementById("show")
-                        .innerHTML = ippui;
-                }
-            }
-        </script>
+        
 
         <footer>
             <p>Remember to look for hidden easter eggs. Hint: Evil Meno</p>
